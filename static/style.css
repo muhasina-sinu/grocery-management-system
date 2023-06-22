@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url('/static/image.jpeg');
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h2 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  }
+  table, th, td {
+    margin-top: 100px;
+    background-color: white;
+    table-layout: auto;
+    width: 500px;
+
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a{
+    justify-content: right;
+  }
+  h4{
+      
+      margin-right: 400px;
+  }
+  
+  
