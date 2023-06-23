@@ -7,6 +7,14 @@ app = Flask(__name__)
 
 connection = get_sql_connection()
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
+@app.route('/order', methods=['GET'])
+def index():
+    return render_template('order.html')
+
 @app.route('/getProducts', methods=['GET'])
 def get_products():
     products = products_dao.get_all_products(connection)
@@ -28,7 +36,10 @@ def add_product():
     
 @app.route('/deleteProduct', methods=['GET','POST'])
 def del_product():
-    pass
+    if request.method == "POST":
+        product_id = request.form.get("id")
+    products_dao.delete_product(connection,product_id)
+    return render_template('index.html')
 
 if __name__ == "__main__":
     print("starting python flask server")
